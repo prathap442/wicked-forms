@@ -1,0 +1,22 @@
+Hi I\'m Social
+<%=form_for @user do |form|%>
+    Bank Informations 
+
+  
+  <div class="field">
+    <%= form.label :name_on_card %>
+    <%= form.text_field :name_on_card %>
+  </div>
+
+  <div class="field">
+    <%= form.label :card_number %>
+    <%= form.text_field :card_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiration %>
+    <%= form.date_select :expiration %>
+  </div>
+  <%=form.submit "Submit"%>
+
+<%end%>

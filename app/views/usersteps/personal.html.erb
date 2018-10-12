@@ -1,0 +1,24 @@
+Hi I\m personal
+Tell Us A Little About Yourself
+<%=form_for @user , url: wizard_path do |form|%>
+
+    <div class="field">
+      <%= form.label :company_name %>
+      <%= form.text_field :company_name %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :website %>
+      <%= form.text_field :website %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :company_email %>
+      <%= form.text_field :company_email %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Continue" %>
+      or <%= link_to "skip this step", next_wizard_path %>
+    </div>    
+<%end%>
